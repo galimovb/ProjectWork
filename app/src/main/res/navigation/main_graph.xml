@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.itis.summerproject.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.itis.summerproject.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
+
+
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="com.itis.summerproject.TrainingFragment"
+        android:label="fragment_training"
+        tools:layout="@layout/fragment_training" />
+
+
+    <fragment
+        android:id="@+id/timesFragment"
+        android:name="com.itis.summerproject.TimesFragment"
+        android:label="fragment_times"
+        tools:layout="@layout/fragment_times" />
+
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.itis.summerproject.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
