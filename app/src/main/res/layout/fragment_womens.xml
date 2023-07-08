@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContainerActivity">
+
+    <TextView
+        android:id="@+id/tvProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Тренировки для женщин:\n\n
+    Руки:\n
+1.Планка на локтях - 1 минуту.\n
+2.Жим гантелей стоя - 5 минут.\n
+3.Бицепсовые качания с гантелями - 4 минуты.\n\n
+
+    Спина:\n
+1.Гиперэкстензия спины - 3 минуты.\n
+2.Тяга верхнего блока к груди - 5 минут.\n
+3.Отведение рук с гантелями - 4 минуты.\n\n
+
+    Пресс:\n
+1.Планка с подъемом ног - 1 минуту.\n
+2.Велосипедные скручивания - 5 минут.\n
+3.Боковые планки - 4 минут.\n\n
+
+    Ноги:\n
+1.Приседания со штангой -5 минут.\n
+2.Жим ногами - 4 минуты.\n
+3.Наброски с гантелями -3 минуты.\n\n
+
+    Ягодицы:\n
+1.Жим ногами в тренажере - 5 минут.\n
+2.Ходьба на подъеме - 4 минуты.\n
+3.Мостик: - 3 минуты."
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

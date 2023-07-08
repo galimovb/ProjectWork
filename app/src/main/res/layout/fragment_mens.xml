@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ContainerActivity">
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Тренировки для мужчин:\n\n
+    Руки:\n
+1.Отжимания на брусьях - 3 минуты.\n
+2.Жим гантелей лежа - 4 минуты.\n
+3.Молотковые подъемы - 5 минут.\n\n
+    Спина:\n
+1.Подтягивания широким хватом - 4 минуты.\n
+2.Гиперэкстензии - 3 минуты.\n
+3.Тяга гантели в наклоне - 5 минут.\n\n
+    Пресс:\n
+1.Планка - 3 минуты.\n
+2.Велосипед - 4 минуты.\n
+3.Пресс с гантелями - 5 минут.\n\n
+    Ноги:\n
+1.Приседания - 4 минуты.\n
+2.Жим ногами - 3 минуты.\n
+3.Выпады с гантелями - 5 минут."
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

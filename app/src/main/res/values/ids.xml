@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_trainingFragment_to_mensFragment" type="id" />
+    <item name="action_trainingFragment_to_womensFragment" type="id" />
+    <item name="warmupFragment" type="id" />
+</resources>

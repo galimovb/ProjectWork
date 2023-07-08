@@ -23,14 +23,17 @@
         android:id="@+id/trainingFragment"
         android:name="com.itis.summerproject.TrainingFragment"
         android:label="fragment_training"
-        tools:layout="@layout/fragment_training" />
-
-
-    <fragment
-        android:id="@+id/timesFragment"
-        android:name="com.itis.summerproject.TimesFragment"
-        android:label="fragment_times"
-        tools:layout="@layout/fragment_times" />
+        tools:layout="@layout/fragment_training" >
+        <action
+            android:id="@+id/action_trainingFragment_to_warmupFragment"
+            app:destination="@id/warmupFragment" />
+        <action
+            android:id="@+id/action_trainingFragment_to_mensFragment3"
+            app:destination="@id/mensFragment" />
+        <action
+            android:id="@+id/action_trainingFragment_to_womensFragment3"
+            app:destination="@id/womensFragment" />
+    </fragment>
 
 
     <fragment
@@ -38,4 +41,24 @@
         android:name="com.itis.summerproject.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/mensFragment"
+        android:name="com.itis.summerproject.MensFragment"
+        android:label="MensFragment"
+        tools:layout="@layout/fragment_mens" />
+    <fragment
+        android:id="@+id/womensFragment"
+        android:name="com.itis.summerproject.WomensFragment"
+        android:label="WomensFragment"
+        tools:layout="@layout/fragment_womens" />
+    <fragment
+        android:id="@+id/warmupFragment"
+        android:name="com.itis.summerproject.WarmupFragment"
+        android:label="WarmupFragment"
+        tools:layout="@layout/fragment_warmup" />
+    <fragment
+        android:id="@+id/timesFragment"
+        android:name="com.itis.summerproject.TimesFragment"
+        android:label="TimesFragment"
+        tools:layout="@layout/fragment_times"/>
 </navigation>
