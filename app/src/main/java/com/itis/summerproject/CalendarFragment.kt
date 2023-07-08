@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import java.util.Calendar
 
 class CalendarFragment : Fragment(R.layout.fragment_calendar) {
     private lateinit var selectedDate: String
@@ -16,10 +17,20 @@ class CalendarFragment : Fragment(R.layout.fragment_calendar) {
         val workoutNameEditText = view.findViewById<EditText>(R.id.workoutNameEditText)
         val addWorkoutButton = view.findViewById<Button>(R.id.addWorkoutButton)
         val workoutListView = view.findViewById<ListView>(R.id.workoutListView)
+        val today = System.currentTimeMillis()
+        calendarView.minDate = today
 
         calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
-            selectedDate = "$dayOfMonth-${month + 1}-$year"
-            updateWorkoutListView()
+            val selectedTime = Calendar.getInstance().apply {
+                set(year, month, dayOfMonth)
+            }.timeInMillis
+
+            if (selectedTime >= today) {
+                selectedDate = "$dayOfMonth-${month + 1}-$year"
+                updateWorkoutListView()
+            } else {
+                Toast.makeText(requireContext(), "Выберите сегодняшнюю или будущую дату", Toast.LENGTH_SHORT).show()
+            }
         }
 
         addWorkoutButton.setOnClickListener {
@@ -41,7 +52,7 @@ class CalendarFragment : Fragment(R.layout.fragment_calendar) {
         val workoutListView = requireView().findViewById<ListView>(R.id.workoutListView)
         val adapter = workoutListView.adapter as ArrayAdapter<String>
         adapter.clear()
-        adapter.addAll(workouts.map { "${it.first}: ${it.second}" })
+        adapter.addAll(workouts.map { "На ${it.first} назначена такая тренировка: ${it.second}" })
         adapter.notifyDataSetChanged()
     }
 }
