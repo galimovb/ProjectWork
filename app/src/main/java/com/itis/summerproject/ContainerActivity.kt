@@ -20,4 +20,13 @@ class ContainerActivity : AppCompatActivity() {
 
         }
     }
+
+    override fun onBackPressed() {
+        val currentFragment = supportFragmentManager.findFragmentById(R.id.container)
+        if (currentFragment is TrainingFragment) {
+            super.onBackPressed()
+        } else {
+            supportFragmentManager.popBackStack()
+        }
+    }
 }
